@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Icon from './icons/nezumi.png'
-import Icon_weibo from './icons/weibo.svg'
-import Icon_bilibili from './icons/bilibili.png'
-import Icon_twitter from './icons/twitter.png'
-import Icon_ins from './icons/ins.png'
-import Icon_pixiv from './icons/pixiv.png'
+
 
 function Nav(props){
   const home_li = "HOME";
@@ -35,11 +30,11 @@ function Icons(props){
   return(
     <div className="icons">
     
-    <img src={Icon_twitter} className="twitter" alt="twitter"></img>
-    <img src={Icon_pixiv} className="pixiv" alt="twitter"></img>
-    <img src={Icon_ins} className="ins" alt="twitter"></img>
-    <img src={Icon_bilibili} className="bilibili" alt="bilibili"></img>
-    <img src={Icon_weibo} className="weibo" alt="twitter"></img>
+    <img src={`${process.env.PUBLIC_URL}/icons/twitter.png`} className="twitter" alt="twitter"></img>
+    <img src={`${process.env.PUBLIC_URL}/icons/pixiv.png`} className="pixiv" alt="twitter"></img>
+    <img src={`${process.env.PUBLIC_URL}/icons/ins.png`} className="ins" alt="twitter"></img>
+    <img src={`${process.env.PUBLIC_URL}/icons/bilibili.png`} className="bilibili" alt="bilibili"></img>
+    <img src={`${process.env.PUBLIC_URL}/icons/weibo.svg`} className="weibo" alt="twitter"></img>
     </div>
   );
 }
@@ -50,19 +45,29 @@ class Header extends React.Component{
     const name = "nezumi";
     const site = "Portfolio Site"
     return (
-      <header className="header">
+      <div className="header">
       <div className="div-nezumi">
-      <img src={Icon} className="nezumi" alt="nezumi" />
+      <img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi" alt="nezumi" />
       </div>
       <div className="div-name"> 
       <p className="name">{name}</p>
       <p className="site-name">{site}</p>
       </div>
       <Icons/>
-      <div class="div-nav">
+      <div className="div-nav">
       <Nav/>
       </div>
-      </header>
+      </div>
+    );
+  }
+}
+
+class HomeBody extends React.Component{
+  render(){
+    return(
+      <div className="homebody">
+        <img className="img" src={`${process.env.PUBLIC_URL}/img/index-img.png`} alt="img"></img>
+      </div>
     );
   }
 }
@@ -73,10 +78,10 @@ class Footer extends React.Component{
     const copyright = "Copyright © NEZUMI All Rights Reserved"
 
     return(
-      <footer className="footer"> 
+      <div className="footer"> 
       <p className="copyright">{copyright}</p>
       <Icons/>
-      </footer>
+      </div>
     );
   }
 }
@@ -86,6 +91,7 @@ class Index extends React.Component{
     return(
       <div>
         <Header />
+        <HomeBody />
         <Footer />
       </div>
     );
