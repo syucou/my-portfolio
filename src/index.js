@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import BasicList from './basiclists';
+import ColorRadioButtons from './colorradio';
 
 function Nav(props){
   const home_li = "HOME";
@@ -22,14 +24,12 @@ function Nav(props){
         <li key="contact">{contact_li}</li>
       </ul>
     </nav>
-    
   );
 }
 
 function Icons(props){
   return(
     <div className="icons">
-    
     <img src={`${process.env.PUBLIC_URL}/icons/twitter.png`} className="twitter" alt="twitter"></img>
     <img src={`${process.env.PUBLIC_URL}/icons/pixiv.png`} className="pixiv" alt="twitter"></img>
     <img src={`${process.env.PUBLIC_URL}/icons/ins.png`} className="ins" alt="twitter"></img>
@@ -39,11 +39,37 @@ function Icons(props){
   );
 }
 
+function News(props){
+  return(
+    <section>
+      <div classNew="h1-news">
+        <h1 className="h1">{"NEWS"}</h1>
+      </div>
+    <div className="basiclist">
+      <BasicList />
+    </div>
+    </section>
+  );
+}
+
+function Gallery(props){
+  return(
+    <section>
+      <div >
+        <div className="pic-gallery">
+          <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-07-12.jpg`} alt="img"></img>
+        </div>
+      <ColorRadioButtons />
+      </div>
+    </section>
+  );
+}
+
 class Header extends React.Component{
   
   render(){
     const name = "nezumi";
-    const site = "Portfolio Site"
+    const site = "Portfolio Site";
     return (
       <div className="header">
       <div className="div-nezumi">
@@ -66,7 +92,12 @@ class HomeBody extends React.Component{
   render(){
     return(
       <div className="homebody">
-        <img className="img" src={`${process.env.PUBLIC_URL}/img/index-img.png`} alt="img"></img>
+        <div className="gallery">
+          <Gallery />
+        </div>
+        <div className="news">
+          <News />
+        </div>   
       </div>
     );
   }

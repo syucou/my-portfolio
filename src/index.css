@@ -12,7 +12,7 @@ code {
 }
 nav{
   float: right;
-  margin: 0 50px 0 200px;
+  margin: 0 100px 0 250px;
   position: relative;
   top: -35px;
 }
@@ -30,7 +30,7 @@ li:hover{
   font-weight:200;
 }
 .nezumi{
-  margin: 20px 0 0 50px;
+  margin: 20px 0 0 100px;
   height: 50px;
   width: 55px;
   -webkit-filter: grayscale(100%);
@@ -41,7 +41,7 @@ li:hover{
   top:0;
   left:0;
   width:100%;
-  height:12%;
+  height:120px;
   background-color: white;
 }
 .name{
@@ -62,7 +62,7 @@ li:hover{
 }
 .icons{
   float:right;
-  margin: 18px 50px 0 0;
+  margin: 18px 100px 0 0;
 }
 .footer{
   background-color: black;
@@ -88,18 +88,51 @@ li:hover{
 .copyright{
   font-size: small;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 100px;
   display: inline-block;
   color: white;
 }
 .homebody{
-  position: absolute;
-  top:12%;
-  width: 100%;
-}
-.img{
-  width:960px;
-  height:480px;
+  width: 960px;
+  padding-top: 120px;
+  padding-bottom: 60px;
   margin:auto;
-  display: block;
+}
+.index-gallery{
+  height:480px;
+  width:720px;
+  object-fit:contain;
+  margin:auto;
+  border-style:solid;
+  border-width: 0.1px;
+  border-color:darkgrey;
+}
+.pic-gallery{
+  width:720px;
+  margin: auto;
+}
+.news{
+  display: inline-block;
+  width:960px;
+  padding-top: 20px;
+}
+.h1-news{
+  width:auto;
+  margin: auto;
+}
+.gallery{
+  display: inline-block;
+  width:960px;
+}
+.colorRadioButtons{
+  width: 140px;
+  margin:auto;
+}
+.h1{
+  width:100px;
+  margin: auto;
+}
+.basiclist{
+  padding-top: 50px;
+  width:auto;
 }
