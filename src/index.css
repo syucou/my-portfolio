@@ -12,7 +12,7 @@ code {
 }
 nav{
   float: right;
-  margin: 0 100px 0 250px;
+  margin: 0 100px 0 220px;
   position: relative;
   top: -35px;
 }
@@ -21,8 +21,8 @@ ul{
 }
 li {
   display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 40px;
+  margin-right: 0;
   font-size: small;
   font-weight:450;
 }
@@ -41,7 +41,7 @@ li:hover{
   top:0;
   left:0;
   width:100%;
-  height:120px;
+  height:100px;
   background-color: white;
 }
 .name{
@@ -94,13 +94,13 @@ li:hover{
 }
 .homebody{
   width: 960px;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 60px;
   margin:auto;
 }
 .index-gallery{
-  height:480px;
-  width:720px;
+  height:560px;
+  width:840px;
   object-fit:contain;
   margin:auto;
   border-style:solid;
@@ -108,7 +108,7 @@ li:hover{
   border-color:darkgrey;
 }
 .pic-gallery{
-  width:720px;
+  width:840px;
   margin: auto;
 }
 .news{
@@ -124,15 +124,33 @@ li:hover{
   display: inline-block;
   width:960px;
 }
-.colorRadioButtons{
-  width: 140px;
-  margin:auto;
+.media{
+  display: inline-block;
+  width:960px;
 }
-.h1{
-  width:100px;
+.colorRadioButtons{
+  width: 130px;
+  margin:auto;
+  padding-top: 10px;
+}
+.h2{
+  width:80px;
   margin: auto;
+  font-family: "optima";
+  color:darkgray;
 }
 .basiclist{
   padding-top: 50px;
   width:auto;
+}
+.video-responsive{
+  width: 640px;
+  margin:auto;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 625px) {
+  .icons, ul{
+    display: none;
+  }
 }

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import BasicList from './basiclists';
 import ColorRadioButtons from './colorradio';
+import BilibiliEmbed from './bilibili';
 
 function Nav(props){
   const home_li = "HOME";
@@ -42,8 +43,8 @@ function Icons(props){
 function News(props){
   return(
     <section>
-      <div classNew="h1-news">
-        <h1 className="h1">{"NEWS"}</h1>
+      <div className="h1-news">
+        <h2 className="h2">{"NEWS"}</h2>
       </div>
     <div className="basiclist">
       <BasicList />
@@ -60,6 +61,19 @@ function Gallery(props){
           <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-07-12.jpg`} alt="img"></img>
         </div>
       <ColorRadioButtons />
+      </div>
+    </section>
+  );
+}
+
+function Media(props){
+  return(
+    <section>
+      <div>
+        <h2 className="h2">{"MEDIA"}</h2>
+      </div>
+      <div className="bilibili-div">
+        <BilibiliEmbed embedId="player.html?aid=293089556" />
       </div>
     </section>
   );
@@ -97,7 +111,10 @@ class HomeBody extends React.Component{
         </div>
         <div className="news">
           <News />
-        </div>   
+        </div>  
+        <div className="media">
+          <Media />
+        </div> 
       </div>
     );
   }
