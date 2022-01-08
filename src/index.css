@@ -149,8 +149,15 @@ li:hover{
   padding: 10px 0;
 }
 
-@media screen and (max-width: 625px) {
+.dehaze{
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
   .icons, ul{
     display: none;
+  }
+  .dehaze{
+    display:initial;
   }
 }

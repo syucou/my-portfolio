@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import BasicList from './basiclists';
 import ColorRadioButtons from './colorradio';
 import BilibiliEmbed from './bilibili';
+import FloatingActionButtons from './dehaze';
+import FloatingActionButtonUpIcon from './upicon';
 
 function Nav(props){
   const home_li = "HOME";
@@ -106,6 +108,7 @@ class HomeBody extends React.Component{
   render(){
     return(
       <div className="homebody">
+        <FloatingActionButtons className="dehaze"/>
         <div className="gallery">
           <Gallery />
         </div>
@@ -115,6 +118,7 @@ class HomeBody extends React.Component{
         <div className="media">
           <Media />
         </div> 
+        <FloatingActionButtonUpIcon />
       </div>
     );
   }
