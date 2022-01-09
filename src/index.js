@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import BasicList from './basiclists';
 import ColorRadioButtons from './colorradio';
 import BilibiliEmbed from './bilibili';
 import FloatingActionButtons from './dehaze';
 import FloatingActionButtonUpIcon from './upicon';
+import AntList from './antlists';
 
 function Nav(props){
   const home_li = "HOME";
@@ -33,11 +36,19 @@ function Nav(props){
 function Icons(props){
   return(
     <div className="icons">
-    <img src={`${process.env.PUBLIC_URL}/icons/twitter.png`} className="twitter" alt="twitter"></img>
-    <img src={`${process.env.PUBLIC_URL}/icons/pixiv.png`} className="pixiv" alt="twitter"></img>
-    <img src={`${process.env.PUBLIC_URL}/icons/ins.png`} className="ins" alt="twitter"></img>
-    <img src={`${process.env.PUBLIC_URL}/icons/bilibili.png`} className="bilibili" alt="bilibili"></img>
-    <img src={`${process.env.PUBLIC_URL}/icons/weibo.svg`} className="weibo" alt="twitter"></img>
+      <a href="https://twitter.com/nezumi_94" target="_blank">
+        <img src={`${process.env.PUBLIC_URL}/icons/twitter.png`} className="twitter" alt="twitter"></img>
+      </a>
+      <a href="https://www.pixiv.net/users/26295133" target="_blank">
+        <img src={`${process.env.PUBLIC_URL}/icons/pixiv.png`} className="pixiv" alt="twitter"></img>
+      </a>
+        <img src={`${process.env.PUBLIC_URL}/icons/ins.png`} className="ins" alt="twitter"></img>
+      <a href="https://space.bilibili.com/27661335" target="_blank">
+        <img src={`${process.env.PUBLIC_URL}/icons/bilibili.png`} className="bilibili" alt="bilibili"></img>
+      </a>
+      <a href="https://weibo.com/3879693956" target="_blank">
+        <img src={`${process.env.PUBLIC_URL}/icons/weibo.svg`} className="weibo" alt="twitter"></img>
+      </a>
     </div>
   );
 }
@@ -49,18 +60,38 @@ function News(props){
         <h2 className="h2">{"NEWS"}</h2>
       </div>
     <div className="basiclist">
-      <BasicList />
+      <AntList />
     </div>
     </section>
   );
 }
 
 function Gallery(props){
+  const bool_t = true;
+  const bool_f = false;
+
   return(
     <section>
       <div >
         <div className="pic-gallery">
-          <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-07-12.jpg`} alt="img"></img>
+          <Carousel 
+            indicatorPosition="none" 
+            infiniteLoop={bool_t} 
+            showThumbs={bool_f} 
+            showArrows={bool_t} 
+            autoPlay={bool_t}
+            className="index-pic"
+            >
+            <div>
+              <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-07-12.jpg`} />
+            </div>
+            <div>
+              <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-08-30.jpg`} />
+            </div>
+            <div>
+              <img className="index-gallery" src={`${process.env.PUBLIC_URL}/gallery/2017-09-23.jpg`} />
+            </div>
+          </Carousel>
         </div>
       <ColorRadioButtons />
       </div>
@@ -89,7 +120,9 @@ class Header extends React.Component{
     return (
       <div className="header">
       <div className="div-nezumi">
-      <img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi" alt="nezumi" />
+        <a href="#">
+          <img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi" alt="nezumi"/>
+        </a>
       </div>
       <div className="div-name"> 
       <p className="name">{name}</p>
@@ -106,9 +139,12 @@ class Header extends React.Component{
 
 class HomeBody extends React.Component{
   render(){
+
+
     return(
       <div className="homebody">
-        <FloatingActionButtons className="dehaze"/>
+          <FloatingActionButtons className="dehaze"/>
+
         <div className="gallery">
           <Gallery />
         </div>

@@ -12,7 +12,7 @@ import { StarBorder } from '@mui/icons-material';
 
 export default function BasicList() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 840, bgcolor: 'background.paper' }}>
+    <Box sx={{ width: '100%', maxWidth: 720, bgcolor: 'background.paper' }} className="box">
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
@@ -20,7 +20,7 @@ export default function BasicList() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <ListItemText primary="nezumiのポートフォリオサイトが始まりました" />
+              <ListItemText primary="nezumiのポートフォリオサイト開設！！" />
             </ListItemButton>
           </ListItem>
           
@@ -29,7 +29,7 @@ export default function BasicList() {
               <ListItemIcon>
                 <StarBorder />
               </ListItemIcon>
-              <ListItemText primary="サブページはまだ工事中です" />
+              <ListItemText primary="サブページは鋭意作成中！" />
             </ListItemButton>
           </ListItem>
          

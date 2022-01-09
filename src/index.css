@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +22,7 @@ ul{
 }
 li {
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 45px;
   margin-right: 0;
   font-size: small;
   font-weight:450;
@@ -30,9 +31,17 @@ li:hover{
   font-weight:200;
 }
 .nezumi{
-  margin: 20px 0 0 100px;
+  margin: -40px 0 0 100px;
   height: 50px;
   width: 55px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.nezumi-icon{
+  margin: 10px 0 0 100px;
+  height: 30px;
+  width: 35px;
+  display: inline;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
@@ -62,7 +71,7 @@ li:hover{
 }
 .icons{
   float:right;
-  margin: 18px 100px 0 0;
+  margin: 15px 100px 0 0;
 }
 .footer{
   background-color: black;
@@ -77,13 +86,19 @@ li:hover{
   padding-left: 5px;
   padding-right: 5px;
   height: 16px;
-  width: 16px;
+  width: 24px;
 }
-.weibo, .ins, .bilibili, .pixiv{
+.weibo{
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 24px;
+  width: 24px;
+}
+.ins, .bilibili, .pixiv{
   padding-left: 5px;
   padding-right: 5px;
   height: 20px;
-  width: 20px;
+  width: 28px;
 }
 .copyright{
   font-size: small;
@@ -99,12 +114,12 @@ li:hover{
   margin:auto;
 }
 .index-gallery{
-  height:560px;
+  height:600px;
   width:840px;
   object-fit:contain;
   margin:auto;
   border-style:solid;
-  border-width: 0.1px;
+  border-width: 1px;
   border-color:darkgrey;
 }
 .pic-gallery{
@@ -132,6 +147,7 @@ li:hover{
   width: 130px;
   margin:auto;
   padding-top: 10px;
+  display: none;
 }
 .h2{
   width:80px;
@@ -139,25 +155,33 @@ li:hover{
   font-family: "optima";
   color:darkgray;
 }
-.basiclist{
-  padding-top: 50px;
-  width:auto;
-}
 .video-responsive{
   width: 640px;
   margin:auto;
   padding: 10px 0;
 }
-
 .dehaze{
   display: none;
 }
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
   .icons, ul{
     display: none;
   }
   .dehaze{
     display:initial;
   }
+}
+.index-pic{
+  border-style:solid;
+  border-width: 0.1px;
+  border-color:darkgrey;
+}
+.box{
+  min-width: 300px;
+}
+.basiclist{
+  padding-bottom: 20px;
+}
+.div-dehaze{
+  position:absolute;
 }
