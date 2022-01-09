@@ -115,6 +115,44 @@ function Media(props){
   );
 }
 
+function Pictures(props){
+  return(
+    <div style={{
+      paddingTop: "15px"
+    }}>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-09-23.jpg`}></img>
+        <p className="p-pic">{"2017-09-23"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-09-11.jpg`}></img>
+        <p className="p-pic">{"2017-09-10"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-09-10.jpg`}></img>
+        <p className="p-pic">{"2017-09-10"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-08-27.jpg`}></img>
+        <p className="p-pic">{"2017-08-27"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-08-30.jpg`}></img>
+        <p className="p-pic">{"2017-08-30"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2017-07-12.jpg`}></img>
+        <p className="p-pic">{"2017-07-12"}</p>
+      </div>
+      <div className="gallery-block">
+        <img className="gallery-pics" src={`${process.env.PUBLIC_URL}/gallery/2016-11-08.jpg`}></img>
+        <p className="p-pic">{"2016-11-08"}</p>
+      </div>
+    </div>
+    
+  );
+}
+
 class Header extends React.Component{
   
   render(){
@@ -176,6 +214,23 @@ class ContactForm extends React.Component{
   }
 }
 
+class GalleryPage extends React.Component{
+  render(){
+    return(
+      <div className="homebody">
+        <FloatingActionButtons className="dehaze"/>
+        <h1 className="h2" style={{
+          paddingTop: "10px",
+        }}>{"GALLERY"}</h1>
+        <div className="pictures">
+          <Pictures />
+        </div>
+        <FloatingActionButtonUpIcon />
+      </div>
+    );
+  }
+}
+
 class Footer extends React.Component{
 
   render(){
@@ -219,7 +274,7 @@ class Gallery extends React.Component{
     return(
       <div>
         <Header />
-        
+          <GalleryPage />
         <Footer />
       </div>
     );

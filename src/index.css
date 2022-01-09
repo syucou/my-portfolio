@@ -176,6 +176,27 @@ li:hover{
   border-width: 0.1px;
   border-color:darkgrey;
 }
+.gallery-pics{
+  height:240px;
+  width:300px;
+  object-fit:contain;
+  box-shadow: 2px 2px 5px #e0e0e0;
+}
+.gallery-block{
+  display: inline-block;
+  padding-right: 30px;
+}
+.gallery-block:nth-child(3n){
+  display: inline-block;
+  padding-right: 0;
+}
+.gallery-block:hover{
+  filter: grayscale(65%);
+}
+.p-pic{
+  text-align: center;
+  padding-top: 5px;
+}
 .box{
   min-width: 300px;
 }
