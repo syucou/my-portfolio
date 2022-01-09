@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import BasicList from './basiclists';
 import ColorRadioButtons from './colorradio';
@@ -12,6 +13,7 @@ import BilibiliEmbed from './bilibili';
 import FloatingActionButtons from './dehaze';
 import FloatingActionButtonUpIcon from './upicon';
 import AntList from './antlists';
+import ContactForm1 from './contact';
 
 
 function Nav(props){
@@ -67,7 +69,7 @@ function News(props){
   );
 }
 
-function Gallery(props){
+function IndexGallery(props){
   const bool_t = true;
   const bool_f = false;
 
@@ -140,13 +142,11 @@ class Header extends React.Component{
 
 class HomeBody extends React.Component{
   render(){
-
-
     return(
       <div className="homebody">
         <FloatingActionButtons className="dehaze"/>
         <div className="gallery">
-          <Gallery />
+          <IndexGallery />
         </div>
         <div className="news">
           <News />
@@ -155,6 +155,22 @@ class HomeBody extends React.Component{
           <Media />
         </div> 
         <FloatingActionButtonUpIcon />
+      </div>
+    );
+  }
+}
+
+class ContactForm extends React.Component{
+  render(){
+    return(
+      <div className="homebody">
+        <FloatingActionButtons className="dehaze"/>
+        <h1 className="h2" style={{
+          paddingTop: "10px",
+        }}>{"CONTACT"}</h1>
+        <div className="contactform">
+          <ContactForm1 />
+        </div>
       </div>
     );
   }
@@ -186,8 +202,51 @@ class Index extends React.Component{
   }
 }
 
+class Profile extends React.Component{
+  render(){
+    return(
+      <div>
+        <Header />
+        
+        <Footer />
+      </div>
+    );
+  }
+}
+
+class Gallery extends React.Component{
+  render(){
+    return(
+      <div>
+        <Header />
+        
+        <Footer />
+      </div>
+    );
+  }
+}
+
+class Contact extends React.Component{
+  render(){
+    return(
+      <div>
+        <Header />
+        <ContactForm />
+        <Footer />
+      </div>
+    );
+  }
+}
+
 ReactDOM.render(
-  <Index />,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />}/>
+      <Route path="profile" element={<Profile />}/>
+      <Route path="gallery" element={<Gallery />}/>
+      <Route path="contact" element={<Contact />}/>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
