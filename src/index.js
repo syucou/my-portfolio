@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -12,6 +12,7 @@ import BilibiliEmbed from './bilibili';
 import FloatingActionButtons from './dehaze';
 import FloatingActionButtonUpIcon from './upicon';
 import AntList from './antlists';
+
 
 function Nav(props){
   const home_li = "HOME";
@@ -143,8 +144,7 @@ class HomeBody extends React.Component{
 
     return(
       <div className="homebody">
-          <FloatingActionButtons className="dehaze"/>
-
+        <FloatingActionButtons className="dehaze"/>
         <div className="gallery">
           <Gallery />
         </div>
