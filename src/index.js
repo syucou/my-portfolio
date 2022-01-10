@@ -325,7 +325,7 @@ class Contact extends React.Component{
 }
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env}>
+  <BrowserRouter>
     <Routes> 
       <Route path="/" element={<Index />}/>
       <Route path="profile" element={<Profile />}/>
