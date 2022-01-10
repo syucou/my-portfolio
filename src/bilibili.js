@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+//youtube方式を参考にビリビリ動画を入れた
 const BilibiliEmbed = ({ embedId }) => (
   <div className="video-responsive">
     <iframe

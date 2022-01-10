@@ -1,5 +1,6 @@
 import React from 'react';
 
+//profileの文書
 export default function ContextProfile(){
     return(
         <div>

@@ -37,6 +37,7 @@ class ContactForm extends React.Component {
   }
 
   render() {
+    //未入力の場合　エラー
     let emailErrorText;
 
     if (this.state.hasEmailError) {
@@ -64,7 +65,7 @@ class ContactForm extends React.Component {
         <span className = "message" style={{
             paddingLeft: "15px"
         }}>送信完了しました</span>
-      );
+      );//ここ分岐
     } else {
       contactForm = (
         <form onSubmit={()=>{this.handleSubmit()}}>

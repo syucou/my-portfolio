@@ -36,6 +36,7 @@ function Nav(props){
   );
 }
 
+//sns
 function Icons(props){
   return(
     <div className="icons">
@@ -56,6 +57,7 @@ function Icons(props){
   );
 }
 
+//news
 function News(props){
   return(
     <section>
@@ -69,6 +71,7 @@ function News(props){
   );
 }
 
+//冒頭の画像　Carouselを利用
 function IndexGallery(props){
   const bool_t = true;
   const bool_f = false;
@@ -102,6 +105,7 @@ function IndexGallery(props){
   );
 }
 
+//media
 function Media(props){
   return(
     <section>
@@ -115,6 +119,7 @@ function Media(props){
   );
 }
 
+//Galleryページの画像　いつか別のところに移す予定
 function Pictures(props){
   return(
     <div style={{
@@ -153,6 +158,7 @@ function Pictures(props){
   );
 }
 
+//header
 class Header extends React.Component{
   
   render(){
@@ -178,6 +184,7 @@ class Header extends React.Component{
   }
 }
 
+//body
 class HomeBody extends React.Component{
   render(){
     return(
@@ -198,6 +205,7 @@ class HomeBody extends React.Component{
   }
 }
 
+//contact問い合わせページ
 class ContactForm extends React.Component{
   render(){
     return(
@@ -214,6 +222,7 @@ class ContactForm extends React.Component{
   }
 }
 
+//Galleryページ
 class GalleryPage extends React.Component{
   render(){
     return(
@@ -231,6 +240,7 @@ class GalleryPage extends React.Component{
   }
 }
 
+//Profileページ
 class ProfileBody extends React.Component{
   render(){
     return(
@@ -247,6 +257,7 @@ class ProfileBody extends React.Component{
   }
 }
 
+//footer
 class Footer extends React.Component{
 
   render(){
@@ -260,6 +271,10 @@ class Footer extends React.Component{
     );
   }
 }
+
+/********************
+ * これからはページの構造
+ ********************/
 
 class Index extends React.Component{
   render(){

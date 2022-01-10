@@ -11,6 +11,7 @@ const data = [
   },
 ];
 
+//newsに使う
 export default function AntList() {
     return (
         <List
@@ -20,8 +21,8 @@ export default function AntList() {
       <List.Item>
         <List.Item.Meta
           avatar={<img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi-icon" alt="nezumi"/>}
-          title={item.title}
-          description={item.description}
+          title={item.title}//dataから入れる
+          description={item.description}//dataから入れる
         />
       </List.Item>
     )}

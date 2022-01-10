@@ -10,6 +10,7 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import { StarBorder } from '@mui/icons-material';
 
+//antdesignを使うので　今のところ使ってない
 export default function BasicList() {
   return (
     <Box sx={{ width: '100%', maxWidth: 720, bgcolor: 'background.paper' }} className="box">

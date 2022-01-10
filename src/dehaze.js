@@ -21,12 +21,15 @@ const fabGreenStyle = {
   };
 
 export default function FloatingActionButtondeHaze() {
+  //初期は閉じる状態にする false
   const [state, setState] = useState(false);
 
+  //drawerを見せる
   const showDrawer = () => {
     setState(true);
   };
 
+  //drawerを閉じる
   const onClose = () => {
     setState(false);
   };
@@ -45,9 +48,9 @@ export default function FloatingActionButtondeHaze() {
       </Fab>
     </Box>
     <Drawer
-      open={state}
+      open={state}//初期はfalse
       onClose={onClose}
-      anchor={'right'}
+      anchor={'right'}//右から現れる
     >
       <Box
         sx={{ width: 150 }}
