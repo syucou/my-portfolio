@@ -212,3 +212,19 @@ li:hover{
   padding-top: 30px;
   padding-left: 65px;
 }
+.profile{
+  width: 300px;
+  margin:auto;
+}
+.link{
+  color:black;
+}
+.link:hover{
+  color:black;
+}
+.link-drawer{
+  color: darkgray;
+}
+.link-drawer:hover{
+  color:black;
+}

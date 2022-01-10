@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import { grey } from '@mui/material/colors';
 import DehazeIcon from '@mui/icons-material/Dehaze';
-
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 
 const fabStyle = {
@@ -58,13 +58,13 @@ export default function FloatingActionButtondeHaze() {
           width: "50px",
           margin:"auto",
           padding:"10px 0 0 0",
-        }}>{home_li}</h4>
+        }}><Link to="/" className="link-drawer">{home_li}</Link></h4>
         <h4 style={{
           color:"darkgray",
           width: "50px",
           margin:"auto",
           padding:"10px 0 0 0",
-        }}>{profile_li}</h4>
+        }}><Link to="/profile" className="link-drawer">{profile_li}</Link></h4>
         <h4 style={{
           color:"darkgray",
           width: "50px",
@@ -76,13 +76,13 @@ export default function FloatingActionButtondeHaze() {
           width: "50px",
           margin:"auto",
           padding:"10px 0 0 0",
-        }}>{gallery_li}</h4>
+        }}><Link to="/gallery" className="link-drawer">{gallery_li}</Link></h4>
         <h4 style={{
           color:"darkgray",
           width: "50px",
           margin:"auto",
           padding:"10px 0 0 0",
-        }}>{contact_li}</h4>
+        }}><Link to="/contact" className="link-drawer">{contact_li}</Link></h4>
       </Box>
     </Drawer>
     </div>

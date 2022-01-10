@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import BasicList from './basiclists';
 import ColorRadioButtons from './colorradio';
@@ -14,7 +14,7 @@ import FloatingActionButtons from './dehaze';
 import FloatingActionButtonUpIcon from './upicon';
 import AntList from './antlists';
 import ContactForm1 from './contact';
-
+import Context from './context';
 
 function Nav(props){
   const home_li = "HOME";
@@ -26,11 +26,11 @@ function Nav(props){
   return(
     <nav>
       <ul>
-        <li key="home">{home_li}</li>
-        <li key="profile">{profile_li}</li>
+        <li key="home"><Link to="/" className="link">{home_li}</Link></li>
+        <li key="profile"><Link to="/profile" className="link">{profile_li}</Link></li>
         <li key="news">{news_li}</li>
-        <li key="gallery">{gallery_li}</li>
-        <li key="contact">{contact_li}</li>
+        <li key="gallery"><Link to="/gallery" className="link">{gallery_li}</Link></li>
+        <li key="contact"><Link to="/contact" className="link">{contact_li}</Link></li>
       </ul>
     </nav>
   );
@@ -161,13 +161,13 @@ class Header extends React.Component{
     return (
       <div className="header">
       <div className="div-nezumi">
-        <a href="#">
+        <Link to="/">
           <img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi" alt="nezumi"/>
-        </a>
+        </Link>
       </div>
       <div className="div-name"> 
-      <p className="name">{name}</p>
-      <p className="site-name">{site}</p>
+      <p className="name"><Link to="/" className="link">{name}</Link></p>
+      <p className="site-name"><Link to="/" className="link">{site}</Link></p>
       </div>
       <Icons/>
       <div className="div-nav">
@@ -231,6 +231,22 @@ class GalleryPage extends React.Component{
   }
 }
 
+class ProfileBody extends React.Component{
+  render(){
+    return(
+      <div className="homebody">
+        <FloatingActionButtons className="dehaze"/>
+        <h1 className="h2" style={{
+          paddingTop: "10px",
+        }}>{"PROFILE"}</h1>
+        <div className="profile">
+          <Context />
+        </div>
+      </div>
+    );
+  }
+}
+
 class Footer extends React.Component{
 
   render(){
@@ -262,7 +278,7 @@ class Profile extends React.Component{
     return(
       <div>
         <Header />
-        
+        <ProfileBody />
         <Footer />
       </div>
     );
@@ -295,7 +311,7 @@ class Contact extends React.Component{
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
+    <Routes> 
       <Route path="/" element={<Index />}/>
       <Route path="profile" element={<Profile />}/>
       <Route path="gallery" element={<Gallery />}/>

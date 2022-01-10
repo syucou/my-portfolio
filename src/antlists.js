@@ -20,7 +20,7 @@ export default function AntList() {
       <List.Item>
         <List.Item.Meta
           avatar={<img src={`${process.env.PUBLIC_URL}/icons/nezumi.png`} className="nezumi-icon" alt="nezumi"/>}
-          title={<a href="https://ant.design">{item.title}</a>}
+          title={item.title}
           description={item.description}
         />
       </List.Item>

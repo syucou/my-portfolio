@@ -38,6 +38,7 @@ class ContactForm extends React.Component {
 
   render() {
     let emailErrorText;
+
     if (this.state.hasEmailError) {
       emailErrorText = (
         <span>
@@ -47,6 +48,7 @@ class ContactForm extends React.Component {
     }
 
     let contentErrorText;
+
     if (this.state.hascontentError) {
       contentErrorText = (
         <span>
@@ -56,6 +58,7 @@ class ContactForm extends React.Component {
     } 
 
     let contactForm;
+
     if (this.state.isSubmitted) {
       contactForm = (
         <span className = "message" style={{
@@ -66,15 +69,17 @@ class ContactForm extends React.Component {
       contactForm = (
         <form onSubmit={()=>{this.handleSubmit()}}>
           <p>メールアドレス（必須)</p>
-          <input
+          <textarea
             value = {this.state.email}
             onChange={(event)=>{this.handleEmailChange(event)}}
+            rows = {"1"}
           />
           {emailErrorText}
           <p>お問い合わせ（必須)</p>
           <textarea 
             value = {this.state.content}
             onChange={(event)=>this.handleContenttChange(event)}
+            rows = {"4"}
           />
           {this.contentErrortext}
           <Button type="submit" 
