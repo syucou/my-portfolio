@@ -1,6 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
+  "homepage": "https://syucou.github.io/my-portfolio",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -43,6 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "."
+  }
 }
